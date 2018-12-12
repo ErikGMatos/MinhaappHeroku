@@ -8,5 +8,5 @@ express()
   .set('view engine', 'ejs')
   .get('/', (req, res) => res.render('pages/index'))
   .get('/:id', function (req, res) {
-    res.status(200).send({Hoje:HELPER.teste(20)});})
+    res.status(200).send({Hoje:25+9});})
   .listen(PORT, () => console.log(`Listening on ${ PORT }`))
