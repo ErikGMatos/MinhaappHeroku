@@ -18,6 +18,15 @@ var meuJS = function () {
                 }
             }).executar();
         });
+
+        $('.office').off().click(function () {  
+            
+            var apiOffice ='https://view.officeapps.live.com/op/view.aspx?src=';
+            var dados = $(this).data('url');
+            var url = encodeURIComponent(dados);
+            var iframe = '<iframe width="100%" height="800px" src="'+apiOffice+url+'" frameborder="0"></iframe>';
+            $('.meu-iframe').html(iframe);
+        });
     }
 
     return {
