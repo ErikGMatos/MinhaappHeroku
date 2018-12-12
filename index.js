@@ -7,10 +7,7 @@ express()
   .set('views', path.join(__dirname, 'views'))
   .set('view engine', 'ejs')
   .get('/', (req, res) => res.render('pages/index'))
-  .get('/:id', function (req, res) {
-    res.status(200).send(
-      {
-        Hoje: HELPER.teste(10)
-      });
-  })
+  .get('/:id', function(req, res) {
+    res.json({ message: HELPER.teste(20) });   
+})
   .listen(PORT, () => console.log(`Listening on ${ PORT }`))
