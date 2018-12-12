@@ -13,7 +13,7 @@ var HELPER = function () {
 
     function bindFunctions() {
 
-        $('.botao').click(function () {
+        $('.botao').off().click(function () {
             var id = 99;
             new GCS().setObj({
                 type: 'GET',
