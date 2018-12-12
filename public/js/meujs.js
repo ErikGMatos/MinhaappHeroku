@@ -1,10 +1,15 @@
 "use strict";
 
-var meuJS = function () {
+var HELPER = function () {
 
     function init() {
         bindFunctions();
     }
+
+    function teste (num) { 
+        var teste = num+8;
+        return teste;
+     }
 
     function bindFunctions() {
 
@@ -30,8 +35,9 @@ var meuJS = function () {
     }
 
     return {
-        init: init
+        init: init,
+        teste:teste
     };
 
 }();
-$(meuJS.init);
+$(HELPER.init);
