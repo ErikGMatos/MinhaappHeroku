@@ -7,6 +7,5 @@ express()
   .set('views', path.join(__dirname, 'views'))
   .set('view engine', 'ejs')
   .get('/', (req, res) => res.render('pages/index'))
-  .get('/:id', function (req, res) {
-    res.status(200).send({Hoje:25+9});})
+  .get('/:id', require('./index2.js'))
   .listen(PORT, () => console.log(`Listening on ${ PORT }`))

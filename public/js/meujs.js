@@ -9,7 +9,7 @@ var HELPER = function () {
     function teste (num) { 
         var teste = num+8;
         return teste;
-     }
+    }
 
     function bindFunctions() {
 
