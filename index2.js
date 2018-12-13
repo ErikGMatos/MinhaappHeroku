@@ -1,3 +1,4 @@
 module.exports = function (req, res) {
-    res.send('The views directory is');
+    debugger;
+    res.send({meuteste:"The views directory is"});
 }
