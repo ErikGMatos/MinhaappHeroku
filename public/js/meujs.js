@@ -17,7 +17,7 @@ var HELPER = function () {
             var id = 99;
             new GCS().setObj({
                 type: 'GET',
-                url: '/'+id,
+                url: '/teste'+id,
                 success: function (data) {
                     debugger;
                 }

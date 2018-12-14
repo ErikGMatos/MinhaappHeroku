@@ -1,4 +1,11 @@
-module.exports = function (req, res) {
-    debugger;
-    res.send({meuteste:"The views directory is"});
-}
+const puppeteer = require('puppeteer');
+module.exports = async function() {
+        const browser = await puppeteer.launch();
+        const page = await browser.newPage();
+        await page.goto('https://example.com');
+        await page.screenshot({path: 'example.png'});
+      
+        await browser.close();
+        return {teste:123};
+    };
+
