@@ -17,9 +17,10 @@ var HELPER = function () {
             var id = 99;
             new GCS().setObj({
                 type: 'GET',
-                url: '/teste'+id,
+                url: '/teste',
                 success: function (data) {
                     debugger;
+                    $('.meu-iframe').html('<h1>'+data.teste[0]+'</h1>');
                 }
             }).executar();
         });
