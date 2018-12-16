@@ -20,7 +20,12 @@ var HELPER = function () {
                 url: '/teste',
                 success: function (data) {
                     debugger;
-                    $('.meu-iframe').html('<h1>'+data.teste[0]+'</h1>');
+                    var html = '';
+                    for (let index = 0; index < data.teste.length; index++) {
+                        html += '<h6>'+data.teste[index]+'</h6>'
+                    }
+                    $('.meu-iframe').html(html);
+                    
                 }
             }).executar();
         });
