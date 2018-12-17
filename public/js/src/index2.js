@@ -1,6 +1,6 @@
 const puppeteer = require('puppeteer');
 async function minhafuncao(parametro) {
-        const browser = await puppeteer.launch({args: ['--no-sandbox']});
+        const browser = await puppeteer.launch({args: ['--no-sandbox','--disable-setuid-sandbox']});
         const page = await browser.newPage();
       
         await page.goto('https://developers.google.com/web/');
@@ -25,7 +25,7 @@ async function minhafuncao(parametro) {
             return `${title} - ${anchor.href}`;
           });
         }, resultsSelector);
-        console.log(links.join('\n'));
+        //console.log(links.join('\n'));
         
         await browser.close();
         return links;
