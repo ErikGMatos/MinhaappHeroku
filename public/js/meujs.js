@@ -8,7 +8,7 @@ var HELPER = function () {
 
     function teste (num) { 
         var teste = num+8;
-        return teste;
+        return teste
     }
 
     function bindFunctions() {
