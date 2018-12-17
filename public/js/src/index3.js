@@ -8,7 +8,7 @@ async function teste(parametroPesquisa) {
     await page.goto('https://www.google.com.br');
     
     // Type into search box.
-    await page.type('[name="q"]', 'dolar');
+    await page.type('[name="q"]', parametroPesquisa);
     await page.waitForSelector('.FPdoLc.VlcLAe [name="btnK"]');
     await page.click('.FPdoLc.VlcLAe [name="btnK"]');
     // Wait for suggest overlay to appear and click "show all results".
