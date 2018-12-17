@@ -2,8 +2,11 @@ const puppeteer = require('puppeteer');
 process.setMaxListeners(Infinity);
 async function teste(parametroPesquisa) {
     
-    const browser = await puppeteer.launch({headless:true,args: ['--no-sandbox','--disable-setuid-sandbox']});
+    const browser = await puppeteer.launch({headless:true,args: ['--no-sandbox','--disable-setuid-sandbox','--disable-dev-shm-usage']});
     const page = await browser.newPage();
+    page.setViewport({ width: 1920, height: 1080 });
+    page.setDefaultNavigationTimeout(60000);
+    await page.setCacheEnabled(false);
     
     await page.goto('https://www.google.com.br');
     
