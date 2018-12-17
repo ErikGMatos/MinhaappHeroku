@@ -19,7 +19,7 @@ var HELPER = function () {
             var joia3 = 199;
             new GCS().setObj({
                 type: 'GET',
-                url: '/api/'+joia+'/'+joia2+'/'+joia3,
+                url: '/teste',//+joia+'/'+joia2+'/'+joia3,
                 success: function (data) {
                     debugger;
                     var html = '';
