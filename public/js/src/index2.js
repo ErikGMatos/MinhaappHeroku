@@ -1,11 +1,11 @@
 const puppeteer = require('puppeteer');
 async function minhafuncao(parametro) {
-        const browser = await puppeteer.launch({args: ['--no-sandbox', '--disable-setuid-sandbox']});
+        const browser = await puppeteer.launch({args: ['--no-sandbox']});
         const page = await browser.newPage();
       
         await page.goto('https://developers.google.com/web/');
       
-        // Type into search box.
+        /// Type into search box.
         await page.type('#searchbox input', 'Headless Chrome');
       
         // Wait for suggest overlay to appear and click "show all results".
