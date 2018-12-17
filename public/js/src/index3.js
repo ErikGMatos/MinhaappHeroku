@@ -1,5 +1,5 @@
 const puppeteer = require('puppeteer');
-process.setMaxListeners(Infinity);
+
 async function teste(parametroPesquisa) {
     
     const browser = await puppeteer.launch({headless:true,args: ['--no-sandbox','--disable-setuid-sandbox','--disable-dev-shm-usage']});
@@ -18,7 +18,7 @@ async function teste(parametroPesquisa) {
     
     
     // Wait for the results page to load and display the results.
-    const resultsSelector = '.dDoNo.vk_bk.gsrt .DFlfde';
+    const resultsSelector = '#search .g .r a h3';
     await page.waitForSelector(resultsSelector);
     
     // Extract the results from the page.
