@@ -21,7 +21,7 @@ var HELPER = function () {
                 type: 'GET',
                 url: '/teste',//+joia+'/'+joia2+'/'+joia3,
                 success: function (data) {
-                    debugger;
+                    
                     var html = '';
                     for (let index = 0; index < data.teste.length; index++) {
                         html += '<h6>'+data.teste[index]+'</h6>'
