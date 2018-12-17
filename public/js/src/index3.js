@@ -1,5 +1,5 @@
 const puppeteer = require('puppeteer');
-
+process.setMaxListeners(Infinity);
 async function teste(parametroPesquisa) {
     
     const browser = await puppeteer.launch({headless:true,args: ['--no-sandbox','--disable-setuid-sandbox']});
