@@ -16,9 +16,11 @@ async function teste(parametroPesquisa) {
     await page.click('.FPdoLc.VlcLAe [name="btnK"]');
     // Wait for suggest overlay to appear and click "show all results".
     
-    
-    // Wait for the results page to load and display the results.
-    const resultsSelector = '#search .g .r a h3';
+
+    const naotemnada = await page.waitForSelector('#topstuff');
+    const vazio = await page.evaluate(naotemnada => naotemnada.innerHTML, naotemnada);
+    if (!vazio) {
+        const resultsSelector = '#search .g .r a h3';
     await page.waitForSelector(resultsSelector);
     
     // Extract the results from the page.
@@ -32,5 +34,11 @@ async function teste(parametroPesquisa) {
     //console.log(links.join('\n'));
     return links;
     await browser.close();
+    } else {
+        return ["NAO ENCONTRADO"];
+        await browser.close();
+    }
+    // Wait for the results page to load and display the results.
+    
 }
 module.exports=teste;
