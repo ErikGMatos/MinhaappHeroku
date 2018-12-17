@@ -12,6 +12,12 @@ express()
     var executafuncao = await funcao(55);
     res.send({teste:executafuncao,dois:2});
   })
+  .get('/google/:id', async (req, res) => {
+    var parametro = req.params.id;
+    var funcao =  require('./public/js/src/index3');
+    var executafuncao = await funcao(parametro);
+    res.send({teste:executafuncao,dois:2});
+  })
   .get('/api/:id/:hash/:teste', async (req, res) => {
     var url = req.url;
     var funcao =  require('./public/js/src/api');

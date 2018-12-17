@@ -14,12 +14,11 @@ var HELPER = function () {
     function bindFunctions() {
 
         $('.botao').off().click(function () {
-            var joia = 99;
-            var joia2 = 199;
-            var joia3 = 199;
+            var parametro = $('.google').val();
+           
             new GCS().setObj({
                 type: 'GET',
-                url: '/teste',//+joia+'/'+joia2+'/'+joia3,[[[[]]]]
+                url: '/google/'+parametro,//+joia+'/'+joia2+'/'+joia3,[[[[]]]]
                 success: function (data) {
                     
                     var html = '';
