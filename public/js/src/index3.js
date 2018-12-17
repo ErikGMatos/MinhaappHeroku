@@ -8,14 +8,14 @@ async function teste(parametroPesquisa) {
     await page.goto('https://www.google.com.br');
     
     // Type into search box.
-    await page.type('[name="q"]', parametroPesquisa);
+    await page.type('[name="q"]', 'dolar');
     await page.waitForSelector('.FPdoLc.VlcLAe [name="btnK"]');
     await page.click('.FPdoLc.VlcLAe [name="btnK"]');
     // Wait for suggest overlay to appear and click "show all results".
     
     
     // Wait for the results page to load and display the results.
-    const resultsSelector = '#search .g .r a h3';
+    const resultsSelector = '.dDoNo.vk_bk.gsrt .DFlfde';
     await page.waitForSelector(resultsSelector);
     
     // Extract the results from the page.
