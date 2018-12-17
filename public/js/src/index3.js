@@ -30,5 +30,4 @@ async function teste(parametroPesquisa) {
     return links;
     await browser.close();
 }
-
 module.exports=teste;
