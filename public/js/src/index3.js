@@ -2,7 +2,7 @@ const puppeteer = require('puppeteer');
 
 async function teste(parametroPesquisa) {
     
-    const browser = await puppeteer.launch({headless:true,args: ['--no-sandbox','--disable-setuid-sandbox','--disable-dev-shm-usage']});
+    const browser = await puppeteer.launch({args: ['--no-sandbox','--disable-setuid-sandbox']});
     const page = await browser.newPage();
     page.setViewport({ width: 1920, height: 1080 });
     page.setDefaultNavigationTimeout(60000);
